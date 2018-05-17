@@ -1,1 +1,1 @@
-Jarvis :  Question Answer Evaluation Automation
+Question Answer Evaluation Automation
