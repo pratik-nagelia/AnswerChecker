@@ -28,7 +28,7 @@ if __name__ == "__main__":
         print "String 1 is in passive voice"
         nvnstring1 = passive_to_active(nvnstring1)
 
-    elif check_passive(tagged_string2):
+    if check_passive(tagged_string2):
         print "String 2 is in passive voice"
         nvnstring2 = passive_to_active(nvnstring2)
 
