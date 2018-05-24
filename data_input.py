@@ -27,8 +27,8 @@ def preprocess(lines):
 
 
 if __name__ == "__main__":
-    o=0
     vocab = []
+    o=0
     for filename in os.listdir('../corpus-20090418'):
         lines = open('../corpus-20090418/'+filename).read()
         lines = lines.lower()
@@ -42,6 +42,7 @@ if __name__ == "__main__":
                 nvn_line = passive_to_active(nvn_line)
             nvn_lines.append(nvn_line)
         o += 1
-        if o == 2:
+        if o == 8:
             break
     model = Word2Vec(vocab, min_count = 1, size = 100, workers = 4)
+    print(model.most_similar("vectors", topn = 2))
